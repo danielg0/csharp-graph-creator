@@ -255,6 +255,13 @@ namespace CSharpGraphCreator
                         regenerate = true;
                     }
                 }
+                // If nothing clicked and shape currently selected
+                else if(lastClicked != null)
+                {
+                    // Deselect currently selected shape
+                    lastClicked.Deselect();
+                    lastClicked = null;
+                }
             }
 
             // Invalidate the display
